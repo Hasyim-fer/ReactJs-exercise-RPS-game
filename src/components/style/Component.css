@@ -1,0 +1,80 @@
+.button {
+  font-size: 20px;
+  margin: 25px 0;
+  padding: 0.4em 1.5em;
+  background-color: orange;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0px 0px 3px -1px black;
+  color: black;
+  width: 100%;
+}
+
+.button:active {
+  transition: 100ms;
+  box-shadow: none;
+}
+
+.btn-login {
+  background-color: transparent;
+  box-shadow: none;
+  border: 1px solid #000000;
+}
+
+.btn-login:active {
+  background-color: black;
+  color: orange;
+  border: none;
+}
+
+.header-authentication {
+  text-align: center;
+  margin-bottom: 20px;
+  /* position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0; */
+}
+
+.header-authentication h1 {
+  margin: 0;
+}
+
+.header-authentication p {
+  margin-top: 0px;
+}
+
+.input-custom {
+  margin: 13px 0;
+}
+
+.line {
+  border-top: 1px solid black;
+  width: 95%;
+}
+
+.social-media {
+  text-align: center;
+}
+
+.btn-custom {
+  height: 13%;
+  font-size: 35px;
+  color: orange;
+  background-color: black;
+  border: none;
+}
+
+.btn-custom:active {
+  color: black !important;
+  background-color: orange !important;
+}
+
+.redirect {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: italic;
+}

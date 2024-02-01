@@ -1,11 +1,14 @@
-import "./App.css";
+import {Route, Routes} from "react-router-dom";
+import "./pages/style/Pages.css";
+import "./layouts/style/Layout.css";
+import "./components/style/Component.css";
+import Login from "./pages/Login";
 
 function App() {
   return (
-    <div className="container">
-      <div className="right">kanan</div>
-      <div className="left">kiri</div>
-    </div>
+    <Routes>
+      <Route path="/login" element={<Login />} />
+    </Routes>
   );
 }
 
