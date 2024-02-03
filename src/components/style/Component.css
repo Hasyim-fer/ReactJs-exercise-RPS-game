@@ -8,6 +8,7 @@
   box-shadow: 0px 0px 3px -1px black;
   color: black;
   width: 100%;
+  cursor: pointer;
 }
 
 .button:active {
@@ -15,16 +16,36 @@
   box-shadow: none;
 }
 
-.btn-login {
+.btn-auth {
   background-color: transparent;
   box-shadow: none;
+}
+
+.btn-auth:active {
+  border: 1px solid transparent;
+}
+
+.border-black {
   border: 1px solid #000000;
 }
 
-.btn-login:active {
+.border-black:active {
   background-color: black;
   color: orange;
-  border: none;
+}
+
+.border-orange {
+  border: 1px solid orange;
+  color: orange;
+}
+
+.border-orange:active {
+  background-color: orange;
+  color: black;
+}
+
+.text-orange {
+  color: orange;
 }
 
 .header-authentication {
@@ -45,12 +66,19 @@
 }
 
 .input-custom {
-  margin: 13px 0;
+  margin: 5px 0 13px;
 }
 
 .line {
-  border-top: 1px solid black;
   width: 95%;
+}
+
+.line-black {
+  border-top: 1px solid black;
+}
+
+.line-orange {
+  border-top: 1px solid orange;
 }
 
 .social-media {
@@ -66,8 +94,15 @@
 }
 
 .btn-custom:active {
+  background-color: transparent !important;
+}
+
+.btn-custom.login:active {
   color: black !important;
-  background-color: orange !important;
+}
+
+.btn-custom.register:active {
+  color: orange !important;
 }
 
 .redirect {
@@ -77,4 +112,13 @@
   font-size: 14px;
   font-weight: 500;
   font-style: italic;
+}
+
+.forgot-password {
+  margin: -15px 0 25px;
+  cursor: pointer;
+}
+
+.color-orange {
+  color: orange;
 }

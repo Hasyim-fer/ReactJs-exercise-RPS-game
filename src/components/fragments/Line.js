@@ -1,7 +1,7 @@
 import React from "react";
 
-function Line() {
-  return <div className="line"></div>;
+function Line(props) {
+  return <div className={`line ${props.lineColor}`}></div>;
 }
 
 export default Line;

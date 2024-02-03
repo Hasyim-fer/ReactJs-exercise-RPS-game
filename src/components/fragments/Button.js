@@ -8,7 +8,7 @@ function Button(props) {
 
   return (
     <Link to={props.target}>
-      <button className={`button ${classCustom}`} style={{backgroundColor: bgCustom, color: colorCstm}} onClick={props.handleClick}>
+      <button className={`button ${classCustom}`} style={{backgroundImage: bgCustom, color: colorCstm}} onClick={props.handleClick}>
         {props.title}
       </button>
     </Link>

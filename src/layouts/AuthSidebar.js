@@ -7,16 +7,18 @@ import AuthPageRedirect from "../components/templates/AuthPageRedirect";
 import {Link} from "react-router-dom";
 
 function AuthSidebar(props) {
+  const position = props.position;
+
   return (
-    <div className="auth-sidebar">
+    <div className={`auth-sidebar ${props.target === "/login" ? "sidebar-from-left" : "sidebar-from-right"} ${position} ${props.target === "/login" ? "bg-black" : null}`}>
       <div>
         <Link to={"/home"}>
-          <ButtonIcon bgColor="black " color="orange" custom="true" value="RPS Games" icon={<CodeFilled />} />
+          <ButtonIcon custom="true" bgColor={props.target === "/login" ? "orange" : "black"} color={props.target === "/login" ? "black" : "orange"} value="RPS Games" icon={<CodeFilled />} />
         </Link>
-        <AboutGame />
+        <AboutGame color={props.target === "/login" ? "color-orange" : null} />
       </div>
-      <Line />
-      <AuthPageRedirect target={props.target} />
+      <Line lineColor={props.target === "/login" ? "line-orange" : "line-black"} />
+      <AuthPageRedirect target={props.target} buttonColor={props.target === "/login" ? "border-orange" : "border-black"} />
     </div>
   );
 }
