@@ -1,5 +1,4 @@
 import React from "react";
-import {Link} from "react-router-dom";
 
 function Button(props) {
   const bgCustom = props.bgCustom;
@@ -7,11 +6,9 @@ function Button(props) {
   const classCustom = props.class;
 
   return (
-    <Link to={props.target}>
-      <button className={`button ${classCustom}`} style={{backgroundImage: bgCustom, color: colorCstm}} onClick={props.handleClick}>
-        {props.title}
-      </button>
-    </Link>
+    <button className={`button ${classCustom}`} style={{backgroundImage: bgCustom, color: colorCstm}} onClick={props.handleClick}>
+      {props.title}
+    </button>
   );
 }
 

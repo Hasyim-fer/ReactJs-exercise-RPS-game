@@ -12,13 +12,15 @@ function AuthSidebar(props) {
   return (
     <div className={`auth-sidebar ${props.target === "/login" ? "sidebar-from-left" : "sidebar-from-right"} ${position} ${props.target === "/login" ? "bg-black" : null}`}>
       <div>
-        <Link to={"/home"}>
+        <Link to={"/homepage"}>
           <ButtonIcon custom="true" bgColor={props.target === "/login" ? "orange" : "black"} color={props.target === "/login" ? "black" : "orange"} value="RPS Games" icon={<CodeFilled />} />
         </Link>
         <AboutGame color={props.target === "/login" ? "color-orange" : null} />
       </div>
       <Line lineColor={props.target === "/login" ? "line-orange" : "line-black"} />
-      <AuthPageRedirect target={props.target} buttonColor={props.target === "/login" ? "border-orange" : "border-black"} />
+      <Link to={props.target}>
+        <AuthPageRedirect target={props.target} buttonColor={props.target === "/login" ? "border-orange" : "border-black"} />
+      </Link>
     </div>
   );
 }

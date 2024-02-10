@@ -4,7 +4,10 @@ import "./layouts/style/Layout.css";
 import "./components/style/Component.css";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Button from "./components/fragments/Button";
+import Dashboard from "./pages/Dashboard";
+import Navbar from "./pages/Navbar";
+import {ProfileProvider} from "./utils/ProfileContext";
+import ProtectedRoute from "./utils/ProtectedRoute";
 
 function App() {
   return (
@@ -12,21 +15,30 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route
-        path="/home"
+        path=""
         element={
-          <center>
-            <h1>homepage belum jadi coegg :v</h1>
-            <Button title="BACK" target={"/login"} />
-          </center>
+          <ProfileProvider>
+            <Navbar />
+          </ProfileProvider>
         }
-      />
+      >
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+      </Route>
       <Route
-        path="/forgot-password"
+        path="/*"
         element={
-          <center>
-            <h1>forgot password page juga belum jadi :v</h1>
-            <Button title="BACK" target={"/login"} />
-          </center>
+          <div>
+            <h1>
+              <center>Page Not Yet Available</center>
+            </h1>
+          </div>
         }
       />
     </Routes>
